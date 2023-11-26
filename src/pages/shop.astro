@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Listview from "../components/Listview.astro";
+
+const data = await fetch(
+  "https://zujkzdvqsjwasmtxzqmu.supabase.co/rest/v1/vahlWood_products?select=*",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1amt6ZHZxc2p3YXNtdHh6cW11Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA4MjI2NTQsImV4cCI6MjAxNjM5ODY1NH0.LklCBuoxUZNfpFfLHuGfS1CJjrEaddQz3BTAe5EcyNg",
+    },
+  }
+).then((res) => res.json());
+console.log(data);
+---
+
+<Layout>
+  <!-- alt det her er det der bliver til <slot /> i Layout.astro -->
+  <section class="katalog">
+    {
+      data.map((wood) => {
+        return <Listview data={wood}/>;
+      })
+    }
+
+  </section>
+
+  <!-- slot slut -->
+</Layout>
