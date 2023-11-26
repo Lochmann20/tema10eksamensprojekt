@@ -26,18 +26,39 @@ console.log(myData);
 
 <Layout>
   <!-- alt det her er det der bliver til <slot /> i Layout.astro -->
-  <article>
+  <section id="productdisplay">
     <!--
-    <section>
+    <article>
       <img class="" src=`//${myData.image}` alt={myData.slug} />
-    </section>
+    </article>
  -->
-    <section>
+    <article>
       <h2>{myData.name}</h2>
       <h3>{myData.category}</h3>
       <p>{myData.description}</p>
       <p>{myData.price}</p>
-    </section>
-  </article>
+    </article>
+  </section>
   <!-- slot slut -->
 </Layout>
+
+<style>
+
+#productdisplay{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+/* større skærme */
+@media screen and (min-width:600px) {
+#productdisplay{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        align-items:center;
+    }
+
+
+  }
+
+</style>

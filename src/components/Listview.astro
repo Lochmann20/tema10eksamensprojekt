@@ -1,10 +1,16 @@
----
-const { data } = Astro.props;
-
----
+<article>
+  <h2>radiatorskjuler</h2>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos
+    dolores cum quasi, est modi numquam doloremque adipisci suscipit culpa,
+    veritatis molestiae quidem sunt laudantium saepe ipsam obcaecati voluptas
+    ullam?
+  </p>
+  <p>spørg for pris</p>
+</article>
 
 <a href={`/moebler/${data.slug}`}>
-<article>
+<section id="cards">
     <!--
     <img
     class=""
@@ -14,5 +20,22 @@ const { data } = Astro.props;
    -->
     <h2>{data.name}</h2>
     <p>{data.price}</p>
-</article>
+</section>
 </a>
+
+<style>
+    #cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap:1rem; 
+    }
+
+    @media screen and (min-width:600px) {
+        #cards{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        align-items:center;
+    }
+  }
+
+</style>
