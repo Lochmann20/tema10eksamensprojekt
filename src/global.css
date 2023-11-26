@@ -13,4 +13,5 @@ main{
 
 h1, h2, h3, p, nav, footer, label, div, a{
     font-family: 'inter';
+    font-weight: 200;
 }
