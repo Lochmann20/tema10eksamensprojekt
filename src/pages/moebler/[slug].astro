@@ -1,0 +1,43 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const data = await fetch(
+    "https://zujkzdvqsjwasmtxzqmu.supabase.co/rest/v1/vahlWood_products?select=*",
+    {
+      method: "GET",
+      headers: {
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1amt6ZHZxc2p3YXNtdHh6cW11Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA4MjI2NTQsImV4cCI6MjAxNjM5ODY1NH0.LklCBuoxUZNfpFfLHuGfS1CJjrEaddQz3BTAe5EcyNg",
+      },
+    }
+  ).then((response) => response.json());
+
+  return data.map((moebler) => {
+    return {
+      params: { slug: moebler.slug },
+      props: { myData: moebler },
+    };
+  });
+}
+const { myData } = Astro.props;
+console.log(myData);
+---
+
+<Layout>
+  <!-- alt det her er det der bliver til <slot /> i Layout.astro -->
+  <article>
+    <!--
+    <section>
+      <img class="" src=`//${myData.image}` alt={myData.slug} />
+    </section>
+ -->
+    <section>
+      <h2>{myData.name}</h2>
+      <h3>{myData.category}</h3>
+      <p>{myData.description}</p>
+      <p>{myData.price}</p>
+    </section>
+  </article>
+  <!-- slot slut -->
+</Layout>
