@@ -11,6 +11,6 @@ main{
     margin-inline: auto;
 }
 
-h1, h2, h3, p, nav, footer{
+h1, h2, h3, p, nav, footer, label, div, a{
     font-family: 'inter';
 }

@@ -1,0 +1,62 @@
+<section id="first-section">
+  <article>
+    <h2>INFO</h2>
+    <p>Søg</p>
+    <p>Handelsbetingelser</p>
+    <p>Fragt & Levering</p>
+  </article>
+
+  <article>
+    <h2>KONTAKT</h2>
+    <h3>VAHL WOOD</h3>
+    <p>3480 Hillerød</p>
+    <p>Danmark</p>
+    <p>E-mail</p>
+    <p>Kundeservice:</p>
+    <p>CVR / VAT number</p>
+  </article>
+</section>
+
+<section id="second-section">
+    <article>
+    <h2>NYHEDSBREV</h2>
+    <p>
+      Hvis du ikke vil gå glip af de nyeste produkter og tilbud, så tilmeld dig
+      nyhedsbrevet.
+    </p>
+    <label for="email">Indtast din e-mail adresse</label>
+    <input type="email" id="email" name="email" />
+    <div class="button">TILMELD</div>
+
+</article>
+</section>
+
+<style>
+  #first-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+
+  }
+
+  #second-section {
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+
+.button {
+    background-color: black;
+    color: white;
+    font-size: medium;
+    margin-bottom: -5rem;
+  }
+
+  /* større skærme */
+  @media screen and (min-width: 600px) {
+    #first-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  }
+</style>
