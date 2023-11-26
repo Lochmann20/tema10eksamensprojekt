@@ -1,0 +1,32 @@
+<h3>@VAHLWOOD</h3>
+<h3>FØLG MED PÅ INSTAGRAM</h3>
+<p>
+  Jeg elsker at se hvordan I indretter jeres hjem, og jeg håber at I vil blive ved
+  med at tagge os på jeres billeder #vahlwood
+</p>
+
+<section class="grid">
+  <img src="" alt="" />
+  <img src="" alt="" />
+  <img src="" alt="" />
+</section>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+
+  img{
+
+  }
+  /* større skærme */
+  @media screen and (min-width: 600px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+    }
+  }
+</style>
