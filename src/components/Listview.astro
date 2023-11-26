@@ -1,4 +1,9 @@
-<article>
+---
+const { data } = Astro.props;
+---
+
+<!-- TEST
+  <article>
   <h2>radiatorskjuler</h2>
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos
@@ -8,6 +13,7 @@
   </p>
   <p>spørg for pris</p>
 </article>
+-->
 
 <a href={`/moebler/${data.slug}`}>
 <section id="cards">
@@ -29,7 +35,6 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap:1rem; 
     }
-
     @media screen and (min-width:600px) {
         #cards{
         display:grid;
