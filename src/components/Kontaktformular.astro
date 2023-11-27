@@ -1,10 +1,67 @@
-<form action="">
-<label>
-    Indtast din e-mail adresse 
-    <input type="email" name="email"/>
-</label>
+<section class="topSection">
+  <h2>HVAD DRØMMER DU OM?</h2>
+  <p>
+    Er du i tvivl om noget, så skriv eller ring endelig til mig. Jeg står altid
+    klar til at hjælpe dig, hvad end du har spørgsmål til en specifik vare eller
+    en special løsning til dit hjem, som du ønsker hjælp til eller noget helt
+    tredje.
+  </p>
+</section>
 
-<div>
-<textarea name="" id="" cols="50" rows="10">BESKED</textarea>
-</div>
+<form action="contact">
+  <label>
+    NAVN
+    <input type="text" name="name" />
+  </label>
+
+  <label>
+    E-mail
+    <input type="email" name="email" />
+  </label>
+
+  <label>
+    TELEFON
+    <input type="tel" name="phonenr" />
+  </label>
+
+  <label>
+    EVT. LINK
+    <input type="text" name="link" />
+  </label>
+
+  <div>
+    <textarea name="" id="" cols="30" rows="10">BESKED</textarea>
+  </div>
+
+  <div class="knap"><a>SEND</a></div>
 </form>
+
+<style>
+  label,
+  input {
+    position: relative;
+    display: block; /* block element, så de ligger på række */
+    box-sizing: border-box;
+    padding-right: 30%; /* måske en anden måle enhed */
+  }
+
+  .knap {
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  .topSection {
+      margin-bottom: 3rem;
+    }
+
+
+  /* større skærme */
+  @media screen and (min-width: 600px) {
+    .topSection {
+      align-items: center;
+      text-align: center;
+      margin-bottom: 3rem;
+
+    }
+  }
+</style>
