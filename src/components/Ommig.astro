@@ -1,0 +1,41 @@
+<section id="about">
+  <article>
+    <h2>OM MIG</h2>
+    <p>
+      Mit navn er Christian. Jeg er 31 år - og jeg elsker at lave møbler og
+      løsninger, der gør mine kunder glade. Jeg tror min drøm er at få folk til
+      at tro på det umulige er opnåeligt igennem min løsningsorienterede
+      tankegang. Jeg vil gerne bruge mit håndværk til at åbne op for
+      mulighederne og skubbe grænserne. Lige nu er det min drøm.
+    </p>
+  </article>
+
+  <article>
+    <img src="/images/blaa.jpg" alt="" />
+  </article>
+</section>
+
+<style>
+    #about{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+
+}
+
+img{
+  width: 200px;
+}
+
+/* større skærme */
+@media screen and (min-width:600px) {
+#about{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        align-items:center;
+    }
+
+
+  }
+
+</style>
