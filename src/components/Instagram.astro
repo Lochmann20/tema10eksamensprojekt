@@ -1,15 +1,20 @@
-<h3>@VAHLWOOD</h3>
+<article class="insta">
+  <h3>@VAHLWOOD</h3>
 <h3>FØLG MED PÅ INSTAGRAM</h3>
 <p>
   Jeg elsker at se hvordan I indretter jeres hjem, og jeg håber at I vil blive ved
   med at tagge os på jeres billeder #vahlwood
 </p>
 
+<a href="www.instagram.com/vahlwood">
 <section class="grid">
-  <img src="" alt="" />
-  <img src="" alt="" />
-  <img src="" alt="" />
+  <img src="/images/blaa.jpg" alt="" />
+  <img src="/images/blaa.jpg" alt="" />
+  <img src="/images/blaa.jpg" alt="" />
 </section>
+</a>
+
+</article>
 
 <style>
   .grid {
@@ -19,6 +24,13 @@
   }
 
   img{
+    width: 200px;
+    margin-top: 2rem;
+  }
+
+  .insta{
+    margin-top: 5rem;
+
 
   }
   /* større skærme */
@@ -27,6 +39,10 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       align-items: center;
+    }
+
+    .insta{
+      text-align: center; /* se på denne igen. center eller left? */
     }
   }
 </style>

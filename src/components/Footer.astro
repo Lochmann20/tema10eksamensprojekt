@@ -11,9 +11,9 @@
     <h3>VAHL WOOD</h3>
     <p>3480 Hillerød</p>
     <p>Danmark</p>
-    <p>E-mail</p>
-    <p>Kundeservice:</p>
-    <p>CVR / VAT number</p>
+    <p>E-mail: Info@vahlwood.com</p>
+    <p>Telefonnr. +45 60 14 80 49</p>
+    <p>CVR / VAT number: 43342533</p>
   </article>
 </section>
 
@@ -36,16 +36,22 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
+    margin-top: 5rem;
   }
 
   #second-section {
     gap: 1rem;
     margin-top: 3rem;
+    margin-bottom: 5rem;
   }
 
 .button {
     background-color: black;
     color: white;
+  }
+
+  h3{
+    font-weight: 300;
   }
 
   /* større skærme */
@@ -55,5 +61,9 @@
       grid-template-columns: 1fr 1fr;
       align-items: center;
     }
+
+    #second-section {
+    margin-bottom: 10rem;
+  }
   }
 </style>
