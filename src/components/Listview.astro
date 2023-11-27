@@ -2,45 +2,22 @@
 const { data } = Astro.props;
 ---
 
-<!-- TEST
-  <article>
-  <h2>radiatorskjuler</h2>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos
-    dolores cum quasi, est modi numquam doloremque adipisci suscipit culpa,
-    veritatis molestiae quidem sunt laudantium saepe ipsam obcaecati voluptas
-    ullam?
-  </p>
-  <p>spørg for pris</p>
-</article>
--->
-
 <a href={`/moebler/${data.slug}`}>
-<section id="cards">
-    <!--
-    <img
-    class=""
-    src={`/images/${data.image}`}
-    alt={data.slug}
-  />
-   -->
-    <h2>{data.name}</h2>
-    <p>{data.price}</p>
-</section>
+  <div class="cards">
+    <section class="gridItem">
+      <img class="cardImg" src={`/images/${data.image}`} alt={data.slug} />
+      <h2>{data.name}</h2>
+      <p>{data.price}</p>
+    </section>
+  </div>
 </a>
 
 <style>
-    #cards{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap:1rem; 
-    }
-    @media screen and (min-width:600px) {
-        #cards{
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        align-items:center;
-    }
+  .cardImg {
+    width: 250px;
   }
 
+  /* større skærme */
+  @media screen and (min-width: 600px) {
+  }
 </style>

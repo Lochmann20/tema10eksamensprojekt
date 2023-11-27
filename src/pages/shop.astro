@@ -28,3 +28,20 @@ console.log(data);
 
   <!-- slot slut -->
 </Layout>
+
+<style>
+   .katalog {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  /* større skærme */
+  @media screen and (min-width: 600px) {
+    .katalog {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  }
+</style>

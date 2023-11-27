@@ -27,11 +27,10 @@ console.log(myData);
 <Layout>
   <!-- alt det her er det der bliver til <slot /> i Layout.astro -->
   <section id="productdisplay">
-    <!--
     <article>
-      <img class="" src=`//${myData.image}` alt={myData.slug} />
+      <img class="productImg" src=`/images/${myData.image}` alt={myData.slug} />
     </article>
- -->
+
     <article>
       <h2>{myData.name}</h2>
       <h3>{myData.category}</h3>
@@ -48,6 +47,10 @@ console.log(myData);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
+}
+
+.productImg{
+  width: 200px;
 }
 
 /* større skærme */
