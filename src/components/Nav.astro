@@ -1,10 +1,132 @@
-<nav class="menu">
-    <ul>
-      <li><a href="/">Forside</a></li>
-      <li><a href="/shop">Shop</a></li>
-      <li><a href="/contact">Kontakt</a></li>
-      <li><a href="/about">Om mig</a></li>
+<div class="menu-bar">
+<button class="hamburger">
+  <div class="bar"></div>
+</button>
+
+<nav class="open-menu">
+  <div>
+    <a href="/index.html">Forside</a>
+    <a href="/shop">Shop</a>
+    <a href="/contact">Kontakt</a>
+    <a href="/about">Om mig</a>
+</div>
+</nav>
+
+<a class="logo" href="/">
+    <img class="img" src="/CA_Logo_2021_vertikal_DK_RGB.png" alt="logo" />
+</a>
+
+<a class="kurv" href="/">
+    <img class="img" src="/CA_Logo_2021_vertikal_DK_RGB.png" alt="logo" />
+</a>
+</div>
 
 
-    </ul>
-  </nav>
+
+
+
+<style>
+.menu-bar{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+  .hamburger{
+    position: relative;
+    display: block;
+    width: 40px; /* bredden på stregerne  */
+    cursor: pointer;
+
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+  }
+
+  .hamburger .bar,
+  .hamburger:after,
+  .hamburger:before {
+    content: "";
+    display: block;
+    width: 100%; /* breden på stregerne */
+    height: 4px; /* tykkelsen på stregerne */
+    background-color: #054674; /* farven på stregerne */
+    margin: 5px -10px; /* den første afgør margin top og nr 2 afgør margin left */
+    transition: 0.4s;
+  }
+  .hamburger.is-active:before {
+    transform: rotate(-50deg) translate(-8px, 4px);
+    position: relative;
+    z-index: 100;
+  }
+
+  .hamburger.is-active:after {
+    transform: rotate(50deg) translate(-8px, -5px);
+    position: relative;
+    z-index: 100;
+  }
+
+  .hamburger.is-active .bar {
+    opacity: 0;
+  }
+
+
+
+
+
+  .open-menu {
+    position: fixed;
+    top: 0; /* vigtig */
+    right: 100%; /* hvor meget af skærmen den fylder. jo mindre procent jo mere kan den ses på skærmen */
+    width: 100%; /* hvor meget boksen fylder */
+    min-height: 100vh; /* hvis man fjerner denne, så fylder den ikke hele skærmen */
+    display: block; 
+    z-index: 98;
+    background-color: white;
+    padding-top: 8rem; /* tesktens placering ift toppen */
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .open-menu.is-active {
+    right: 0;
+  }
+
+  .open-menu a {
+    display: block;
+    /*width: 100%;*/
+    /*max-width: 200px;*/
+    /*margin: 0 auto 16px;*/
+    /*text-align: center;*/
+    /*padding: 12px 16px;*/
+    color: #000000;
+    /*text-decoration: none;*/
+    font-family: "open sans";
+    font-weight: 500;
+    font-size: x-large;
+  }
+
+  .open-menu a {
+    transition: transform 0.2 ease;
+  }
+
+  .open-menu a:hover {
+    transform: scale(1.1);
+  }
+
+</style>
+
+
+<script>
+  const menu_btn = document.querySelector(".hamburger");
+  const open_menu = document.querySelector(".open-menu");
+
+  menu_btn.addEventListener("click", function () {
+    menu_btn.classList.toggle("is-active");
+    open_menu.classList.toggle("is-active");
+  });
+</script>
