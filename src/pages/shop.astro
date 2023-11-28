@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Listview from "../components/Listview.astro";
-import Instagram from "../components/Instagram.astro";
 
 const data = await fetch(
   "https://zujkzdvqsjwasmtxzqmu.supabase.co/rest/v1/vahlWood_products?select=*",
@@ -27,8 +26,6 @@ console.log(data);
 
   </section>
 
-  <Instagram/>
-
   <!-- slot slut -->
 </Layout>
 
@@ -44,7 +41,8 @@ console.log(data);
     .katalog {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      align-items: center;
+      /*align-items: center;*/
+      text-align: center; /* se denne igen */
     }
   }
 </style>
