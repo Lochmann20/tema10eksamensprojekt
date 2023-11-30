@@ -9,50 +9,46 @@
 </section>
 
 <form action="contact">
-  <label>
-    NAVN
-    <input type="text" name="name" />
-  </label>
+  <label for="fname">Navn</label>
+  <input type="text" name="name" placeholder="Dit navn"/>
+  
 
-  <label>
-    E-MAIL
-    <input type="email" name="email" />
-  </label>
+  <label for="fname">Email</label>
+  <input type="text" name="email" placeholder="Din email"/>
+  
 
-  <label>
-    TELEFON
-    <input type="tel" name="phonenr" />
-  </label>
+  <label>Telefonnr</label>
+  <input type="text" name="phonenr" placeholder="Dit nummer"/>
+ 
 
-  <label>
-    EVT. LINK
-    <input type="text" name="link" />
-  </label>
+  <label>EVT. LINK</label>
+  <input type="text" name="link" placeholder="Link"/>
+  
 
-  <div>
-    <textarea name="" id="" cols="30" rows="10">BESKED</textarea>
-  </div>
+  <label for="besked">Besked</label>
+  <textarea name="" id="subject" cols="30" rows="10" placeholder="Besked"></textarea>
+  
 
-  <p class="knap"><a>SEND</a></p>
+  <input class="send" type="text" value="Send">
 </form>
 
 <style>
-  label,
-  input {
-    position: relative;
-    display: block; /* block element, så de ligger på række */
-    box-sizing: border-box;
-    padding-right: 30%; /* måske en anden måle enhed */
+
+  form{
+    display: grid;
   }
 
-  .knap {
-    background-color: black;
-    color: white;
-    padding: 1rem;
-    width: 10rem;
-    margin-top: 0.5rem;
+  .send{
+    width: 30%;
     text-align: center;
   }
+
+  input[type=text], select, textarea {
+      padding: 12px;
+      box-sizing: border-box;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
 
   .topSection {
     margin-bottom: 2rem;
@@ -68,6 +64,11 @@
     .knap:hover {
     transform: scale(1.1);
     /*transition: 1s;*/
+  }
+
+  .send{
+    width: 15%;
+    text-align: center;
   }
   }
 </style>

@@ -12,13 +12,9 @@
 </div>
 </nav>
 
-<a class="logo" href="/">
-    <img class="img" src="/CA_Logo_2021_vertikal_DK_RGB.png" alt="logo" />
-</a>
+<img class="logo-icon" src="/Logo-icon.png" alt="logo" />
 
-<a class="kurv" href="/">
-    <img class="img" src="/CA_Logo_2021_vertikal_DK_RGB.png" alt="logo" />
-</a>
+<img class="kurv-icon" src="/kurv-icon.png" alt="logo" />
 </div>
 
 
@@ -29,6 +25,17 @@
 .menu-bar{
   display: flex;
   justify-content: space-between;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.logo-icon{
+  width: 47%;
+}
+
+.kurv-icon{
+  width: 5%;
+  margin-right: 1em;
 }
 
 
@@ -51,11 +58,12 @@
   .hamburger:before {
     content: "";
     display: block;
-    width: 100%; /* breden på stregerne */
+    width: 90%; /* breden på stregerne */
     height: 4px; /* tykkelsen på stregerne */
     background-color: #054674; /* farven på stregerne */
     margin: 5px -10px; /* den første afgør margin top og nr 2 afgør margin left */
     transition: 0.4s;
+    margin-left: 1em;
   }
   .hamburger.is-active:before {
     transform: rotate(-50deg) translate(-8px, 4px);
@@ -93,21 +101,17 @@
   }
 
   .open-menu.is-active {
-    right: 0;
+    right: 0%;
   }
 
   .open-menu a {
     display: block;
-    /*width: 100%;*/
-    /*max-width: 200px;*/
-    /*margin: 0 auto 16px;*/
-    /*text-align: center;*/
-    /*padding: 12px 16px;*/
     color: #000000;
-    /*text-decoration: none;*/
     font-family: "open sans";
     font-weight: 500;
     font-size: x-large;
+    text-decoration: none;
+    text-align: start;
   }
 
   .open-menu a {
@@ -118,6 +122,65 @@
     transform: scale(1.1);
   }
 
+
+
+
+
+
+@media screen and (min-width: 599px) {
+  .logo-icon{
+    width: 27%;
+  }
+
+  .kurv-icon{
+    width: 4%;
+    margin-right: 1em;
+  }
+
+  .hamburger .bar,
+  .hamburger:after,
+  .hamburger:before {
+  width: 100%;
+  margin-left: 1em;
+}
+
+.open-menu.is-active{
+  right: 70%;
+}
+
+.open-menu{
+  width: 30%;
+}
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 999px) {
+  .logo-icon{
+    width: 14%;
+  }
+
+  .kurv-icon{
+    width: 2%;
+  }
+
+  .hamburger .bar,
+  .hamburger:after,
+  .hamburger:before {
+  width: 100%;
+  margin-left: 2em;
+}
+
+.open-menu a{
+  text-align: start;
+
+}
+}
 </style>
 
 
