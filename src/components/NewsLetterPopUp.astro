@@ -1,0 +1,128 @@
+
+
+
+<div class="newsletter-modul">
+    <div class="newsletter-background">
+        <form id="newsletter-form">
+            <h1>VAHL WOOD</h1>
+            <h2>10% rabat på din første ordre.</h2>
+            <p>Tilmeld dig nyhedsbrevet og spar 10% på din første ordre.</p>
+            <div class="form-groupe">
+            <input type="email" name="email" id="email" placeholder="Enter email adress">
+            <button id="submit-btn">Modtag din rabat</button>
+            </div>
+            <p class="nejTak">Nej Tak</p>
+            <h3>Du tilmelder dig for at modtage kommunikation via e-mail og kan til enhver tid afmelde dig.</h3>
+        </form>
+    </div>
+</div>
+
+
+<style>
+    .newsletter-modul{
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0, 0.5);
+    }
+
+
+    .newsletter-background{
+        width: 79%;
+        margin: 126px auto;
+        padding: 20px;
+        background-color: white;
+        text-align: center;
+        border: 1px solid grey;
+    }
+
+    .form-groupe{
+        display: grid;
+        gap: 14px;
+    }
+
+    .form-groupe input{
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #eee;
+    }
+
+    .form-groupe button {
+        margin: 0;
+        padding: 10px;
+        border: none;
+        color: black;
+    }
+
+    h1{
+        font-size: 1rem;
+        margin-bottom: 0.2rem;
+    }
+    
+    h2{
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 0.2rem;
+    }
+
+    p{
+        font-size: 0.7rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .nejTak{
+        font-size: 0.8rem;
+        margin-bottom: 0.2rem;
+    }
+
+    h3{
+        font-size: 0.5rem;
+        margin-bottom: 0.2rem;
+    }
+
+    #submit-btn{
+        margin-bottom: 0.2rem;
+    }
+
+
+
+@media screen and (min-width: 800px) {
+    .newsletter-background{
+        width: 47%;
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+    .newsletter-background{
+        width: 20%;
+    }
+    
+}
+</style>
+
+
+<script>
+    const newsletter = document.querySelector('.newsletter-modul');
+    const newsform = document.getElementById('newsletter-form');
+
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            newsletter.style.display = 'block';
+        }, 3000);
+        })
+
+        newsletter.addEventListener('click', (e) => {
+            if(e.target == newsletter){
+                newsletter.style.display = 'none';
+            }
+        });
+
+        newsform.addEventListener('submit', (e) =>{
+            e.preventDefault();
+
+            newsletter.style.display = 'none';
+        });
+</script>
