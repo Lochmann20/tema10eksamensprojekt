@@ -1,0 +1,27 @@
+---
+const { data } = Astro.props;
+---
+
+<!--<a href={`/${data.slug}`}>-->
+ <a href={`/${data.category}`}>
+  <div class="">
+    <section class="gridItem">
+      <img class="cardImg" src={`/images/${data.image2}`} alt={data.slug} />
+      <h2>{data.category}</h2>
+    </section>
+  </div>
+</a>
+
+<style>
+  .cardImg {
+    width: 250px;
+  }
+
+  h2, p{
+    color: black;
+  }
+
+  /* større skærme */
+  @media screen and (min-width: 600px) {
+  }
+</style>
