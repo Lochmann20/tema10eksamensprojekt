@@ -1,16 +1,56 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Kategori from "../components/Kategori.astro";
 import Video from "../components/Video.astro";
 
 import RodgivningOmVahlWood from "../components/RodgivningOmVahlWood.astro";
 
+const data = await fetch(
+  "https://zujkzdvqsjwasmtxzqmu.supabase.co/rest/v1/vahlWood_products?select=*",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1amt6ZHZxc2p3YXNtdHh6cW11Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA4MjI2NTQsImV4cCI6MjAxNjM5ODY1NH0.LklCBuoxUZNfpFfLHuGfS1CJjrEaddQz3BTAe5EcyNg",
+    },
+  }
+).then((res) => res.json());
+console.log(data);
 ---
 
 <Layout>
     <!-- alt det her er det der bliver til <slot /> i Layout.astro -->
     <Video/>
+    <section class="kategori">
+      {
+        data.map((moebler) => {
+          return <Kategori data={moebler}/>;
+        })
+      }
+  
+    </section>
     <!-- slot slut -->
     <RodgivningOmVahlWood />
 
 </Layout>
        
+<style>
+    .kategori {
+     display: grid;
+     gap: 1rem;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   }
+ 
+   /* større skærme */
+   @media screen and (min-width: 600px) {
+     .kategori {
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       /*align-items: center;*/
+       text-align: center; /* se denne igen */
+     }
+   }
+ </style>
+
+
+          
