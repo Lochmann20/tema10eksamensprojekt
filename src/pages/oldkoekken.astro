@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import ProduktCard from "../components/ProduktCard.astro";
 
 const data = await fetch(
-  "https://zujkzdvqsjwasmtxzqmu.supabase.co/rest/v1/vahlWood_products",
+  "https://zujkzdvqsjwasmtxzqmu.supabase.co/rest/v1/vahlWood_products?select=*",
   {
     method: "GET",
     headers: {
@@ -30,21 +30,25 @@ console.log(data);
 </Layout>
        
 <style>
-    .kategori {
+
+    /*     .kategori {
      display: grid;
      gap: 1rem;
      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
    }
+   */
+
  
    /* større skærme */
+   /**
    @media screen and (min-width: 600px) {
      .kategori {
        display: grid;
        grid-template-columns: 1fr 1fr; */
-       align-items: center;
-     text-align: center; /* se denne igen */
-     }
-   }
+       /*align-items: center;*/
+     /*  text-align: center; /* se denne igen */
+    /* }
+   }*/
  </style>
 
 
