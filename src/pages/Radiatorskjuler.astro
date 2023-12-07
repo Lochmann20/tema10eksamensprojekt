@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import ProduktCard from "../components/ProduktCard.astro";
 
 const data = await fetch(
-  "https://zujkzdvqsjwasmtxzqmu.supabase.co/rest/v1/vahlWood_products?select=*",
+  "https://zujkzdvqsjwasmtxzqmu.supabase.co/rest/v1/vahlWood_products?category=eq.radiatorskjuler",
   {
     method: "GET",
     headers: {
