@@ -1,12 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Kategori from "../components/Kategori.astro";
-import Video from "../components/Video.astro";
-
-import RodgivningOmVahlWood from "../components/RodgivningOmVahlWood.astro";
+import ProduktCard from "../components/ProduktCard.astro";
 
 const data = await fetch(
-  "https://zujkzdvqsjwasmtxzqmu.supabase.co/rest/v1/kategori?select=*",
+"https://zujkzdvqsjwasmtxzqmu.supabase.co/rest/v1/vahlWood_products?category=eq.koekken",
   {
     method: "GET",
     headers: {
@@ -20,17 +17,15 @@ console.log(data);
 
 <Layout>
     <!-- alt det her er det der bliver til <slot /> i Layout.astro -->
-    <Video/>
     <section class="kategori">
       {
         data.map((shop) => {
-          return <Kategori data={shop}/>;
+          return <ProduktCard data={shop}/>;
         })
       }
   
     </section>
     <!-- slot slut -->
-    <RodgivningOmVahlWood />
 
 </Layout>
        
@@ -39,19 +34,21 @@ console.log(data);
      display: grid;
      gap: 1rem;
      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-     text-align: center;
    }
  
    /* større skærme */
    @media screen and (min-width: 600px) {
      .kategori {
        display: grid;
-       grid-template-columns: 1fr 1fr;
-       /*align-items: center;*/
-       text-align: center; /* se denne igen */
+       grid-template-columns: 1fr 1fr; */
+       align-items: center;
+     text-align: center; /* se denne igen */
      }
    }
  </style>
 
+<!-- "https://zujkzdvqsjwasmtxzqmu.supabase.co/rest/v1/vahlWood_products" -->
+<!-- "https://zujkzdvqsjwasmtxzqmu.supabase.co/rest/v1/vahlWood_products?select=*"-->
+<!--"https://zujkzdvqsjwasmtxzqmu.supabase.co/rest/v1/vahlWood_products?category=koekken" -->
 
           

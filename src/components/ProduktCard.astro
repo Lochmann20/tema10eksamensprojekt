@@ -3,26 +3,26 @@ const { data } = Astro.props;
 ---
 
 <!--<a href={`/${data.slug}`}>-->
- <a href={`/${data.kategori}`}>
-  <div class="">
+ <a href={`/moebler/${data.slug}`}>
+  <div class="card">
     <section class="gridItem">
-      <img class="cardImg" src={`/images/${data.imagekat}`} alt={data.slug} />
-      <h2>{data.kategori}</h2>
+      <img class="cardImg" src={`/images/${data.image2}`} alt={data.slug} />
+      <h2>{data.name}</h2>
     </section>
   </div>
 </a>
 
 <style>
+
+  .card{
+    margin-top: 5rem;
+  }
   .cardImg {
-    width: 350px;
+    width: 250px;
   }
 
   h2, p{
     color: black;
-  }
-
-  a{
-    text-decoration: none;
   }
 
   /* større skærme */
