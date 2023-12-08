@@ -11,6 +11,8 @@
   <img src="/images/blaa.jpg" alt="" />
   <img src="/images/blaa.jpg" alt="" />
   <img src="/images/blaa.jpg" alt="" />
+  <img src="/images/blaa.jpg" alt="" />
+
 </section>
 </a>
 
@@ -19,12 +21,14 @@
 <style>
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-items: center;
+    gap: 1rem;
+
   }
 
   img{
-    width: 200px;
+    width: 100%;
     margin-top: 2rem;
   }
 
@@ -36,8 +40,9 @@
   @media screen and (min-width: 600px) {
     .grid {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
       align-items: center;
+      gap: 1rem;
     }
 
     .insta{
