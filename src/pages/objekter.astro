@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import ProduktCard from "../components/ProduktCard.astro";
 
 const data = await fetch(
-"https://zujkzdvqsjwasmtxzqmu.supabase.co/rest/v1/vahlWood_products?category=eq.koekken",
+  "https://zujkzdvqsjwasmtxzqmu.supabase.co/rest/v1/vahlWood_products?category=eq.objekter",
   {
     method: "GET",
     headers: {
@@ -47,9 +47,5 @@ console.log(data);
    }
  </style>
 
-<!-- "https://zujkzdvqsjwasmtxzqmu.supabase.co/rest/v1/vahlWood_products" -->
-<!-- "https://zujkzdvqsjwasmtxzqmu.supabase.co/rest/v1/vahlWood_products?select=*"-->
-<!--"https://zujkzdvqsjwasmtxzqmu.supabase.co/rest/v1/vahlWood_products?category=koekken" -->
-<!-- "https://zujkzdvqsjwasmtxzqmu.supabase.co/rest/v1/vahlWood_products?category=eq.koekken" KORREKT-->
 
           
