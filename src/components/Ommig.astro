@@ -1,7 +1,4 @@
 <section id="about">
-  <article class="image">
-    <img src="/images/blaa.jpg" alt="" />
-  </article>
   <article>
     <h2>OM MIG</h2>
     <p>
@@ -11,6 +8,12 @@
       tankegang. Jeg vil gerne bruge mit håndværk til at åbne op for
       mulighederne og skubbe grænserne. Lige nu er det min drøm.
     </p>
+    <p class="tag">Hvad drømmer du om?</p>
+    <a href="/contact"><p class="knap">KONTAKT</p></a>
+
+  </article>
+  <article class="image">
+    <img src="/images/radiator_2.webp" alt="" />
   </article>
 </section>
 
@@ -20,25 +23,43 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
     margin-top: 5rem;
+    margin-left: 2rem;
+    
   }
 
   img {
-    width: 390px;
-    margin-top: -4rem;
+    width: 290px;
   }
 
   .image{
-    text-align: center;
+    /*text-align: center;*/
+    margin-top: 2rem;
   }
   p{
-    padding: 25px;
+    font-size: 23px;
+    max-width: 90%;
+  }
+
+  .tag{
+    margin-top: 2rem;
   }
 
   h2{
-    position: absolute;
-    top: 80px;
-    left: 15px;
+    /*position: absolute;*/
+    /*top: 80px;*/
+    /*left: 15px;*/
+    margin-bottom: 2rem;
+    font-size: 35px;
+
+  }
+
+  .knap{
+    background-color: black;
     color: white;
+    padding: 1rem;
+    width: 10rem;
+    margin-top: 2rem;
+    text-align: center;
   }
 
   /* større skærme */

@@ -17,6 +17,10 @@ console.log(data);
 
 <Layout>
   <!-- alt det her er det der bliver til <slot /> i Layout.astro -->
+  <div class="top">
+  <h2>Velkommen til vores verden af enestående snedkerkunst, hvor hvert produkt bærer sjælen af nøje udvalgte materialer og dygtigt håndværk. Skab dit personlige rum med vores unikke trædesign, hvor funktionalitet møder skønhed. Oplev den tidløse elegance, der kun kan opstå fra års erfaring og dedikation til at skabe varige mesterværker.</h2>
+</div>
+
   <section class="katalog">
     {
       data.map((moebler) => {
@@ -36,7 +40,18 @@ console.log(data);
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     margin-top: 5rem;
     text-align: center;
+}
 
+.top{
+  display: inline-block;
+  text-align: left;
+  margin-left: 2rem;
+  margin-top: 5rem;
+
+}
+h2{
+  font-size: large;
+  max-width: 90%;
 }
   
 
@@ -47,6 +62,10 @@ console.log(data);
       grid-template-columns: 1fr 1fr;
       /*align-items: center;*/
       text-align: center; /* se denne igen */
+    }
+
+    h2{
+      margin: 20px;
     }
   }
 </style>
