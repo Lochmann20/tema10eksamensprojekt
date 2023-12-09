@@ -17,6 +17,9 @@ console.log(data);
 
 <Layout>
     <!-- alt det her er det der bliver til <slot /> i Layout.astro -->
+    <div class="top"><h1>OBJEKTER</h1>
+    <h2>Én snedker, utallige mesterværker: Oplev skønheden i vores unikke træobjekter, skabt med omhu og ekspertise</h2></div>
+
     <section class="kategori">
       {
         data.map((shop) => {
@@ -34,7 +37,27 @@ console.log(data);
      display: grid;
      gap: 1rem;
      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     text-align: center;
    }
+
+   .top {
+    display: inline-block;
+    text-align: left;
+    margin-left: 2rem;
+    margin-top: 5rem;
+  }
+
+  H1 {
+    margin-bottom: 2rem;
+    font-weight: 400;
+    letter-spacing: 7px;
+    font-size: 27px;
+  }
+
+  h2 {
+    font-size: 18px;
+    max-width: 80%;
+  }
  
    /* større skærme */
    @media screen and (min-width: 600px) {

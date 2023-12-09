@@ -8,6 +8,7 @@ const { data } = Astro.props;
     <section class="gridItem">
       <img class="cardImg" src={`/images/${data.image2}`} alt={data.slug} />
       <h2>{data.name}</h2>
+      <p>{data.price}</p>
     </section>
   </div>
 </a>
@@ -19,13 +20,17 @@ const { data } = Astro.props;
 
   }
   .cardImg {
-    width: 100%;
-    /*width: 350px;*/
+    /*width: 100%;*/
+    width: 300px;
   }
 
   h2{
     color: black;
     margin-top: 1rem;
+  }
+
+  a{
+    color: black;
   }
 
 
