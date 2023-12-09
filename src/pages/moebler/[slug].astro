@@ -33,7 +33,7 @@ console.log(myData);
 
     <article>
       <h2>{myData.name}</h2>
-      <h3>{myData.category}</h3>
+      <!--<h3>{myData.category}</h3> -->
       <p>{myData.description}</p>
       <p>{myData.price}</p>
     </article>
@@ -42,32 +42,40 @@ console.log(myData);
 </Layout>
 
 <style>
-
-#productdisplay{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
-  margin-top: 5rem;
-
-}
-
-.productImg{
-  width: 200px;
-}
-
-/* større skærme */
-@media screen and (min-width:600px) {
-#productdisplay{
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        align-items:center;
-    }
-
-    .productImg{
-  width: 350px;
-}
-
-
+  #productdisplay {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 5rem;
+    margin-left: 2rem;
   }
 
+  .productImg {
+    width: 200px;
+    text-align: center; /* virker ikke */
+  }
+  h2,
+  h3,
+  p {
+    margin-top: 1rem;
+    max-width: 90%;
+  }
+
+  h2{
+    font-weight: 400;
+  }
+
+  /* større skærme */
+  @media screen and (min-width: 600px) {
+    #productdisplay {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+
+    .productImg {
+      width: 300px;
+      text-align: center; /* virker ikke */
+    }
+  }
 </style>

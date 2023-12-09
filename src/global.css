@@ -15,4 +15,5 @@ h1, h2, h3, p, nav, footer, label, div, a{
     font-family: 'inter';
     font-weight: 200;
     line-height: 1.5;
+    text-decoration: none;
 }
