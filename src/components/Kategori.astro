@@ -3,7 +3,7 @@ const { data } = Astro.props;
 ---
 
 <!--<a href={`/${data.slug}`}>-->
- <a href={`/${data.kategori}`}>
+<a href={`/${data.kategori}`}>
   <div class="grid">
     <section class="col1">
       <img class="cardImg" src={`/images/${data.imagekat}`} alt={data.slug} />
@@ -14,57 +14,80 @@ const { data } = Astro.props;
       <h2>{data.kategori}</h2>
       <p>{data.info}</p>
     </section>
- 
   </div>
 </a>
 
 <style>
-
-  .grid{
+  .grid {
     display: grid;
     grid-template-columns: 1fr;
   }
 
-  .col1{
-  text-align: center;
+  .col1 {
+    /*text-align: center;*/
+  }
+
+  .col1,
+  .col2 {
+    /*grid-area: 1/1;*/
   }
   .cardImg {
     width: 350px;
   }
-
-  h2, p{
+  h2, p {
     color: black;
     text-align: left;
-    margin-left: 3rem;
-    font-size: 22px;
+    font-size: 20px;
+    max-width: 70%;
   }
 
-  h2{
+  .cardImg, h2, p{
+    margin-left: 4rem;
+
+  }
+
+  h2 {
     font-weight: 400;
+    margin-top: 2rem;
   }
 
-  a{
+  p{
+    margin-bottom: 2rem;
+
+  }
+
+  a {
     text-decoration: none;
   }
 
   /* større skærme */
   @media screen and (min-width: 600px) {
-    .grid{
+    .grid {
       display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+      grid-template-columns: 1fr 1fr;
+    }
 
-  .col1{
-    margin-bottom: 5rem;
+    .grid section:nth-child(even) {
+      grid-column: 1;
+      grid-row: 1;
+      flex-direction: row-reverse;
+    }
 
-  }
+    .col1 {
+      margin-bottom: -1rem;
+    }
 
-  .col2{
-    padding: 50px;
-  }
+    .col2 {
+      /*padding: 50px;*/
+    }
 
-  h2{
-    margin-top: 5rem;
-  }
+    .col1,
+    .col2 {
+      /*grid-area: none;*/
+    }
+
+    h2 {
+      margin-top: 5rem;
+    }
   }
 </style>
