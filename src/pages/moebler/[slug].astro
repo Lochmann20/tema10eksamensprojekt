@@ -50,17 +50,20 @@ console.log(myData);
     gap: 1rem;
     margin-top: 5rem;
     margin-left: 2rem;
+    text-align: center; /* se på denne igen i mobile version */
   }
 
   .productImg {
     width: 200px;
     text-align: center; /* virker ikke */
   }
+
   h2,
   h3,
   p {
     margin-top: 1rem;
     max-width: 90%;
+    text-align: left;
   }
 
   h2{
@@ -78,6 +81,8 @@ console.log(myData);
     text-align: center;
   }
 
+  
+
   /* større skærme */
   @media screen and (min-width: 600px) {
     #productdisplay {
@@ -90,5 +95,20 @@ console.log(myData);
       width: 300px;
       text-align: center; /* virker ikke */
     }
+
+    article:nth-child(1){
+      order: 2;
+    }
+
+    article:nth-child(2){
+      order: 1;
+    }
+
+    .knap:hover {
+    background-color: #DAD3C1;
+    color: black;
+    /*transition: 1s;*/
+  }
+
   }
 </style>
