@@ -8,7 +8,7 @@
 
   <article>
     <h2>KONTAKT</h2>
-    <h3>VAHL WOOD</h3>
+    <h3>Vahl Wood</h3>
     <p>3480 Hillerød</p>
     <p>Danmark</p>
     <p>E-mail: Info@vahlwood.com</p>
@@ -24,14 +24,35 @@
       Hvis du ikke vil gå glip af de nyeste produkter og tilbud, så tilmeld dig
       nyhedsbrevet.
     </p>
+
+    <!--
     <label for="email">Indtast din e-mail adresse</label>
-    <input type="email" id="email" name="email" />
+    <input type="email" id="email" name="email" /> -->
+
+    <form action="">
+    <label for="fname"></label>
+    <input type="text" name="email" placeholder="Indtast din e-mail"/>
+  </form>
+
     <p class="knap">TILMELD</p>
 
 </article>
 </section>
 
 <style>
+
+input[type=text], select, textarea {
+      padding: 15px;
+      width: 80%;
+      box-sizing: border-box;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      /*margin-bottom: 16px;*/
+      resize: vertical;
+      /*border-radius: 15px;*/
+      border-radius: 5px;
+
+    }
   #first-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -47,15 +68,20 @@
     padding: 25px;
   }
 
+  h2{
+    letter-spacing: 7px;
+    margin-bottom: 2rem;
+
+  }
   h3{
-    font-weight: 300;
+    font-weight: 400;
   }
 
   .knap{
     background-color: black;
     color: white;
     padding: 1rem;
-    width: 10rem;
+    width: 13rem;
     margin-top: 0.5rem;
     text-align: center;
   }
@@ -73,7 +99,9 @@
   }
 
   .knap:hover {
-    transform: scale(1.1);
+    /*transform: scale(1.1);*/
+    background-color: #DAD3C1;
+    color: black;
     /*transition: 1s;*/
   }
   }

@@ -1,5 +1,5 @@
 <article class="insta">
-  <h3>@VAHLWOOD</h3>
+  <h2>@VAHLWOOD</h2>
 <h3>FØLG MED PÅ INSTAGRAM</h3>
 <p>
   Jeg elsker at se hvordan I indretter jeres hjem, og jeg håber at I vil blive ved
@@ -8,10 +8,10 @@
 
 <a href="www.instagram.com/vahlwood">
 <section class="grid">
-  <img src="/images/hylde1.webp" alt="" />
-  <img src="/images/hylde1.webp" alt="" />
-  <img src="/images/hylde1.webp" alt="" />
-  <img src="/images/hylde1.webp" alt="" />
+  <img src="/images/kvadrat4.webp" alt="" />
+  <img src="/images/kvadrat2.webp" alt="" />
+  <img src="/images/kvadrat1.webp" alt="" />
+  <img src="/images/kvadrat3.webp" alt="" />
 
 </section>
 </a>
@@ -21,20 +21,29 @@
 <style>
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     justify-items: center;
     gap: 1rem;
 
   }
 
   img{
-    width: 100%;
+    width: 150px;
     margin-top: 2rem;
   }
 
   .insta{
     margin-top: 5rem;
     padding: 25px;
+  }
+
+  h2, h3, p{
+    margin-top: 0.5rem;
+  }
+
+  h3{
+    letter-spacing: 7px;
+
   }
   /* større skærme */
   @media screen and (min-width: 600px) {
@@ -47,8 +56,13 @@
 
     .insta{
       text-align: center; /* se på denne igen. center eller left? */
+      margin-top: 5rem;
     }
 
+    img{
+    width: 100%;
+    margin-top: 2rem;
+  }
     img:hover {
     transform: scale(1.1);
     transition: 1s;
