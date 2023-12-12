@@ -25,14 +25,17 @@ const { data } = Astro.props;
 
   .col1 {
     /*text-align: center;*/
+    margin: 1rem;
   }
+
+
 
   .col1,
   .col2 {
     /*grid-area: 1/1;*/
   }
   .cardImg {
-    width: 280px;
+    width: 300px;
   }
   h2, p {
     color: black;
@@ -40,7 +43,7 @@ const { data } = Astro.props;
   }
 
   .cardImg, h2, p{
-    margin-left: 4rem;
+    margin-left: 25px;
 
   }
 
@@ -65,6 +68,11 @@ const { data } = Astro.props;
     display: grid;
   }
 
+  .col2{
+    margin-left: 1rem; 
+
+  }
+
   /* større skærme */
   @media screen and (min-width: 600px) {
     .grid {
@@ -87,7 +95,11 @@ const { data } = Astro.props;
     .col2 {
       /*padding: 50px;*/
       /*order: 2;*/
+      margin-left: 2rem; 
+      margin-top: 2rem;
     }
+
+ 
 
     .col1,
     .col2 {
@@ -97,6 +109,10 @@ const { data } = Astro.props;
     h2 {
       margin-top: 5rem;
     }
+
+    .cardImg {
+    width: 100%;
+  }
 
   }
 </style>
