@@ -1,10 +1,7 @@
 <section class="topSection">
   <h2>HVAD DRØMMER DU OM?</h2>
   <p>
-    Er du i tvivl om noget, så skriv eller ring endelig til mig. Jeg står altid
-    klar til at hjælpe dig, hvad end du har spørgsmål til en specifik vare eller
-    en special løsning til dit hjem, som du ønsker hjælp til eller noget helt
-    tredje.
+    Hvis du har spørgsmål eller er i tvivl om noget, er du velkommen til at kontakte mig. Du kan ringe på telefonnummeret +45 60 14 80 49, eller du kan udfylde kontaktformularen nedenfor. Jeg vil bestræbe mig på at vende tilbage til dig så hurtigt som muligt. Uanset om det drejer sig om specifikke varer, specialløsninger til dit hjem eller noget helt andet, er jeg altid klar til at hjælpe.
   </p>
 </section>
 
@@ -34,6 +31,7 @@
   form{
     display: grid;
     padding: 25px;
+    margin-top: -2rem;
   }
 
   .send{
@@ -46,7 +44,7 @@
       box-sizing: border-box;
       margin-bottom: 16px;
       resize: vertical;
-      border-radius: 15px;
+      border-radius: 5px;
     }
 
   .topSection {
@@ -65,6 +63,18 @@
     margin-left: 2rem;
   }
 
+  p{
+    max-width: 65%;
+    text-align: left;
+    margin-top: 2rem;
+  }
+
+  h2{
+    text-align: left;
+    font-weight: 400;
+    letter-spacing: 4px;
+
+  }
   /* større skærme */
   @media screen and (min-width: 600px) {
     .topSection {
@@ -74,9 +84,11 @@
     }
     .knap:hover {
     /*transform: scale(1.1);*/
-    background-color: #DAD3C1;
-    color: black;
+    /*background-color: #DAD3C1;*/
+    /*color: black;*/
     /*transition: 1s;*/
+    opacity: 70%;
+
   }
 
   .send{

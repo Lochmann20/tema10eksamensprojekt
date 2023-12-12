@@ -29,9 +29,11 @@ console.log(myData);
   <section id="productdisplay">
     <article>
       <img class="productImg" src=`/images/${myData.image}` alt={myData.slug} />
+      <img class="productImg" src=`/images/${myData.image}` alt={myData.slug} />
+
     </article>
 
-    <article>
+    <article class="tekst">
       <h2>{myData.name}</h2>
       <!--<h3>{myData.category}</h3> -->
       <p>{myData.description}</p>
@@ -46,9 +48,9 @@ console.log(myData);
 <style>
   #productdisplay {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* se på denne igen */
     gap: 1rem;
-    margin-top: 5rem;
+    margin-top: 4rem;
     margin-left: 2rem;
     text-align: center; /* se på denne igen i mobile version */
   }
@@ -61,7 +63,7 @@ console.log(myData);
   h2,
   h3,
   p {
-    margin-top: 1rem;
+    margin-top: 2rem;
     max-width: 90%;
     text-align: left;
   }
@@ -69,8 +71,9 @@ console.log(myData);
   h2{
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 7px;
-  }
+    letter-spacing: 4px;
+    text-decoration: underline; /* se på denne igen , er der pænt? */
+    }
 
   .knap{
     background-color: black;
@@ -88,11 +91,13 @@ console.log(myData);
     #productdisplay {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      align-items: center;
+      margin-top: 6rem;
+
+      /*align-items: center;*/
     }
 
     .productImg {
-      width: 300px;
+      width: 350px;
       text-align: center; /* virker ikke */
     }
 
@@ -105,8 +110,9 @@ console.log(myData);
     }
 
     .knap:hover {
-    background-color: #DAD3C1;
-    color: black;
+    /*background-color: #DAD3C1;*/
+    /*color: black;*/
+    opacity: 70%;
     /*transition: 1s;*/
   }
 
