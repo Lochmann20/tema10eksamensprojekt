@@ -27,6 +27,15 @@ const { data } = Astro.props;
     /*width: 100%;*/
     width: 300px;
   }
+
+  .cardImg::before{
+    background: black;
+  }
+
+  .cardImg:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
   h2{
     color: black;
     margin-top: 1rem;
