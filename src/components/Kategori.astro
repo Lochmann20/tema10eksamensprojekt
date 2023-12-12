@@ -62,6 +62,7 @@ const { data } = Astro.props;
 
   a {
     text-decoration: none;
+    display: grid;
   }
 
   /* større skærme */
@@ -71,12 +72,12 @@ const { data } = Astro.props;
       grid-template-columns: 1fr 1fr;
     }
 
-   .grid section:nth-child(even) {
+   /*.grid section:nth-child(even) {
       grid-column: 1;
       grid-row: 1;
       flex-direction: row-reverse;
-      /*order: 1;*/
-    }
+      order: 1;
+    }*/
 
     .col1 {
       margin-bottom: -1rem;

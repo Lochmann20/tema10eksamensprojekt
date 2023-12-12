@@ -17,3 +17,9 @@ h1, h2, h3, p, nav, footer, label, div, a{
     line-height: 1.5;
     text-decoration: none;
 }
+
+
+.kategori a:nth-child(even) .grid .col2 {
+    grid-column: 1;
+    grid-row: 1; 
+    }
