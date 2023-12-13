@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import ProduktCard from "../components/ProduktCard.astro";
 
 const data = await fetch(
-  "https://zujkzdvqsjwasmtxzqmu.supabase.co/rest/v1/vahlWood_products?category=eq.radiatorskjuler",
+  "https://zujkzdvqsjwasmtxzqmu.supabase.co/rest/v1/vahlWood_products?category=eq.løsninger",
   {
     method: "GET",
     headers: {
@@ -17,7 +17,7 @@ console.log(data);
 
 <Layout>
     <!-- alt det her er det der bliver til <slot /> i Layout.astro -->
-    <div class="top"><h1>RADIATORSKJULER</h1>
+    <div class="top"><h1>UNIKKE LØSNINGER</h1>
     <h2 class="top2">Unikke radiatorskjulere skræddersyet til dit rum: Opdag vores individuelt designede radiatorskjulere, der kombinerer æstetik og funktionalitet med snedkerens præcision</h2></div>
 
     <section class="kategori">
