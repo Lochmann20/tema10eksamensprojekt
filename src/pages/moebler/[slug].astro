@@ -35,11 +35,18 @@ console.log(myData);
 
     <article class="tekst">
       <h2>{myData.name}</h2>
-      <p>{myData.price}</p>
+      <h3>{myData.price}</h3>
       <a href="/contact"><p class="knap">KONTAKT FOR BESTILLING</p></a>
       <!--<h3>{myData.category}</h3> -->
       <p class="beskrivelse">{myData.description}</p>
-
+      <section class="produktinformation">
+      <h3>Produktinformation</h3>
+      <ul>
+      <p>{myData.productInfo}</p>
+      <p>{myData.productInfo2}</p>
+      <p>{myData.productInfo3}</p>
+      </ul>
+    </section>
     </article>
   </section>
   <!-- slot slut -->
@@ -51,12 +58,13 @@ console.log(myData);
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* se på denne igen */
     gap: 1rem;
     margin-top: 4rem;
-    margin-left: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     text-align: center; /* se på denne igen i mobile version */
   }
 
   .productImg {
-    width: 200px;
+    width: 160px;
     text-align: center; /* virker ikke */
   }
 
@@ -88,6 +96,23 @@ console.log(myData);
     margin-top: 3rem;
   }
 
+  .produktinformation{
+    margin-top: 3rem;
+  }
+
+
+  .produktinformation h3{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 400;
+    font-size: 17px;
+
+
+}
+  .produktinformation p{
+margin-top: 1rem;
+/*text-decoration: underline;*/
+}
   
 
   /* større skærme */
