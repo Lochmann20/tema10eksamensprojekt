@@ -4,6 +4,8 @@
     <p>Søg</p>
     <p>Handelsbetingelser</p>
     <p>Fragt & Levering</p>
+    <a href="facebook.com" class="s"> <img src="/public/facebook.svg" alt="Facebook" class="icon"> </a>
+    <a href="instagram.com" class="s"> <img src="/public/instagram.svg" alt="Instagram" class="icon"> </a>
   </article>
 
   <article>
@@ -53,7 +55,17 @@ input[type=text], select, textarea {
       border-radius: 5px;
 
     }
-  #first-section {
+  
+    #first-section a img{
+      margin-top: 15px;
+
+    }
+
+    #first-section a:hover{
+      opacity: 80%;
+    }
+  
+    #first-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
@@ -85,6 +97,10 @@ input[type=text], select, textarea {
     margin-top: 0.5rem;
     text-align: center;
   }
+  '
+  
+
+
 
   /* større skærme */
   @media screen and (min-width: 600px) {
