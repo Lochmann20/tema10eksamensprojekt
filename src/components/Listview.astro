@@ -4,21 +4,24 @@ const { data } = Astro.props;
 
 <a href={`/moebler/${data.slug}`}>
   <div class="cards">
-    <section class="gridItem">
       <img class="cardImg" src={`/images/${data.image}`} alt={data.slug} />
       <h2>{data.name}</h2>
       <p>{data.price}</p>
-    </section>
   </div>
 </a>
 
 <style>
 
-  .gridItem{
-    margin-bottom: 3rem;
+  .cards{
+    margin-top: 2rem;
+    /*text-align: center;*/
+    padding: 25px;
+    /*margin-top: 0rem;*/
   }
+
   .cardImg {
-    width: 250px;
+    width: 100%;
+    height: auto;
   }
 
   h2, p{
@@ -40,5 +43,13 @@ font-size: 17px;
 
   /* større skærme */
   @media screen and (min-width: 600px) {
+    .cardImg {
+    width: 420px;
+    height: auto;
+  }
+
+  .cards{
+      margin-top: 3rem;
+    }
   }
 </style>

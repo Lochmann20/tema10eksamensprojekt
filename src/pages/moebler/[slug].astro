@@ -28,6 +28,11 @@ console.log(myData);
   <!-- alt det her er det der bliver til <slot /> i Layout.astro -->
   <section id="productdisplay">
     <article>
+      <img class="productImg" src=`/images/${myData.image}` alt={myData.slug} />
+      <img class="productImg" src=`/images/${myData.image}` alt={myData.slug} />
+    </article>
+
+    <article>
       <div class="tekst">
         <h2>{myData.name}</h2>
         <h3>{myData.price}</h3>
@@ -45,10 +50,7 @@ console.log(myData);
       </div>
     </article>
 
-    <article>
-      <img class="productImg" src=`/images/${myData.image}` alt={myData.slug} />
-      <img class="productImg" src=`/images/${myData.image}` alt={myData.slug} />
-    </article>
+   
   </section>
   <!-- slot slut -->
 </Layout>
