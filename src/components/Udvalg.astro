@@ -1,0 +1,72 @@
+<h2>Se udvalg</h2>
+
+<a href="/shop">
+<article class="grid">
+    <section class="col1">
+        <img src="images/radiatorw.webp" alt="">
+        <div class="knap">
+            <p>SE KOLLEKTIONEN</p>
+          </div>
+    </section>
+    <section class="col2">
+        <img src="images/tsofabord_closeup.webp" alt="">
+        <div class="knap">
+            <p>SE KOLLEKTIONEN</p>
+          </div>
+    </section>
+</article>
+</a>
+
+<style>
+
+.col1, .col2{
+    position: relative;
+
+}
+
+.knap {
+    position: absolute;
+    top: 80%; /* jo højere procent jo længere fra top */
+    left: 50%; /* placeret i midten */
+    transform: translate(-50%, -80%);
+    text-decoration: none;
+    background-color: black;
+    padding: 1rem;
+    width: 16rem;
+    margin-top: 2rem;
+    text-align: center;
+    z-index: 1;
+  }
+
+  p {
+    color: white;
+    font-size: 16px;
+  }
+
+  .knap:hover {
+    opacity: 70%;
+  }
+
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+        gap: 1rem;
+        margin: 2rem;
+    }
+
+    img{
+        width: 100%;
+        height: auto;
+    }
+
+    h2{
+        text-align: center;
+        font-weight: 300;
+        font-size: 25px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-top: 6rem;
+        margin-bottom: 3rem;
+
+    }
+</style>
