@@ -26,6 +26,7 @@
 #menu-bar{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: white;
   padding-top: 0.5rem;
   
@@ -45,8 +46,10 @@
 }
 
 .logo-img{
-  margin-top: 0.5rem;
   width: 200px;
+  margin-top: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .brev{
@@ -59,13 +62,13 @@
   .hamburger{
     position: relative;
     display: block;
-    width: 2rem; /* bredden på stregerne  */
+    /*width: 3rem; /* bredden på stregerne  */
     cursor: pointer;
     appearance: none;
     background: none;
     outline: none;
     border: none;
-    margin-left: 1.5em;
+    /*margin-left: 1.5em;*/
   }
 
 
@@ -74,10 +77,10 @@
   .hamburger:before {
     content: "";
     display: block;
-    width: 60%; /* breden på stregerne */
+    width: 2rem; /* breden på stregerne */
     height: 2px; /* tykkelsen på stregerne */
     background-color: #000000; /* farven på stregerne */
-    margin: 5px -10px; /* den første afgør margin top og nr 2 afgør margin left */
+    margin: 5px 2rem; /* den første afgør margin top og nr 2 afgør margin left */
     transition: 0.4s;
   }
   .hamburger.is-active:before {
@@ -144,17 +147,18 @@
 
 @media screen and (min-width:599px) {
   .hamburger{
-    width: 54px;
+    /*width: 54px;*/
   }
 
-  .logo-img{
+  /*.logo-img{
     width: 300px;
-  }
+  }*/
 
+  /*
   .img{
     width: 6%;
     margin-right: 0.5em;
-  }
+  }*/
 
   .open-menu.is-active {
     right: 24em;
@@ -168,21 +172,22 @@
 
 @media screen and (min-width:999px) {
   .hamburger{
-    width: 45px;
-    margin-left: 3rem;
+   /* width: 45px;*/
+    /*margin-left: 3rem;*/
   }
 
-  .logo-img{
+  /*.logo-img{
     width: 300px;
     margin-left: 5rem;
     margin-top: 0.5rem;
-  }
+  }*/
 
+  /*
   .img{
     width: 3%;
     margin-right: 1em;
     margin-top: 1em;
-  }
+  }*/
 
   .open-menu{
     width: 26%;
