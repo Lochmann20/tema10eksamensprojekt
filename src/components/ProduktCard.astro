@@ -6,7 +6,7 @@ const { data } = Astro.props;
 <!-- <div class="json_obj" data-json={jsonData}></div> --><!--<a href={`/${data.slug}`}>-->
 <a href={`/moebler/${data.slug}`}>
   <div class="card">
-    <img class="cardImg" src={`/images/${data.image2}`} alt={data.slug} />
+    <img class="cardImg" src={`/images/${data.image1}`} alt={data.slug} />
     <h2>{data.name}</h2>
     <p>{data.price}</p>
   </div>
