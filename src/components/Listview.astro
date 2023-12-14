@@ -4,52 +4,85 @@ const { data } = Astro.props;
 
 <a href={`/moebler/${data.slug}`}>
   <div class="cards">
+    <div class="overlay">
       <img class="cardImg" src={`/images/${data.image1}`} alt={data.slug} />
-      <h2>{data.name}</h2>
-      <p>{data.price}</p>
-  </div>
-</a>
+      <div class="knap">
+        <p>SE MERE</p>
+      </div>
+    </div>
 
-<style>
+        <h2>{data.name}</h2>
+        <p>{data.price}</p>
+      </div>
+    </a>
 
-  .cards{
+
+    <style>
+
+.overlay{
+    position: relative;
+  }
+
+  .knap {
+    position: absolute;
+    top: 80%; /* jo højere procent jo længere fra top */
+    left: 50%; /* placeret i midten */
+    transform: translate(-50%, -80%);
+    text-decoration: none;
+    background-color: black;
+    padding: 1rem;
+    width: 16rem;
     margin-top: 2rem;
-    /*text-align: center;*/
-    padding: 25px;
-    /*margin-top: 0rem;*/
+    text-align: center;
+    z-index: 1;
   }
 
-  .cardImg {
-    width: 100%;
-    height: auto;
+  .knap:hover {
+    opacity: 70%;
   }
+  div .knap p {
+    color: white;
+    font-size: 16px;
+  }
+      .cards {
+        margin-top: 2rem;
+        /*text-align: center;*/
+        padding: 25px;
+        /*margin-top: 0rem;*/
+      }
 
-  h2, p{
-    color: black;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 300;  
-  }
+      .cardImg {
+        width: 100%;
+        height: auto;
+      }
 
-    h2{
-margin-top: 1rem;
-font-size: 17px;
-  }
+      h2,
+      p {
+        color: black;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 300;
+      }
 
-  p{
-    font-size: 13px;
-    margin-top: 0.5rem;
-  }
+      h2 {
+        margin-top: 1rem;
+        font-size: 17px;
+      }
 
-  /* større skærme */
-  @media screen and (min-width: 600px) {
-    .cardImg {
-    width: 420px;
-    height: auto;
-  }
+      p {
+        font-size: 13px;
+        margin-top: 0.5rem;
+      }
 
-  .cards{
-      margin-top: 3rem;
-    }
-  }
-</style>
+      /* større skærme */
+      @media screen and (min-width: 600px) {
+        .cardImg {
+          width: 420px;
+          height: auto;
+        }
+
+        .cards {
+          margin-top: 3rem;
+        }
+      }
+    </style>
