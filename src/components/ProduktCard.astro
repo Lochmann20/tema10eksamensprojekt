@@ -1,68 +1,82 @@
 ---
 const { data } = Astro.props;
+// const jsonData = JSON.stringify({data})
 ---
 
-<!--<a href={`/${data.slug}`}>-->
- <a href={`/moebler/${data.slug}`}>
+<!-- <div class="json_obj" data-json={jsonData}></div> --><!--<a href={`/${data.slug}`}>-->
+<a href={`/moebler/${data.slug}`}>
   <div class="card">
-    <section class="gridItem">
-      <img class="cardImg" src={`/images/${data.image2}`} alt={data.slug} />
-      <h2>{data.name}</h2>
-      <p>{data.price}</p>
-    </section>
+    <img class="cardImg" src={`/images/${data.image2}`} alt={data.slug} />
+    <h2>{data.name}</h2>
+    <p>{data.price}</p>
   </div>
 </a>
 
 <style>
+  .card {
+    margin-top: 2rem;
+    /*text-align: center;*/
+    padding: 25px;
 
-  .card{
-    margin-top: 5rem;
-    text-align: center;
   }
-  
   .cardImg {
-    /*width: 100%;*/
-    width: 300px;
+    width: 100%;
+    height: auto;
+    background-image: url({`/images/${data.imageHover}`});
   }
 
-  .cardImg::before{
-    background: black;
+  .cardImg:hover {
+    background: url({`/images/${data.imageHover}`});
   }
 
-  .cardImg:hover::before {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-  h2{
+  h2, p{
     color: black;
-    margin-top: 1rem;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-weight: 300;
+  }
+  h2 {
+    margin-top: 1rem;
     font-size: 17px;
-
   }
 
-  p{
-margin-top: 0.5rem;
-font-weight: 300;
-letter-spacing: 3px;
-font-size: 13px;
-
-
-
+  p {
+    font-size: 13px;
+    margin-top: 0.5rem;
   }
 
-  a{
+  a {
     color: black;
   }
 
-
-
-
   /* større skærme */
   @media screen and (min-width: 600px) {
+    .cardImg {
+    width: 420px;
+    height: auto;
   }
-
-
+    .card{
+      margin-top: 3rem;
+    }
+  }
 </style>
+
+<script>
+  // const jData = JSON.parse(document.querySelector(".json_obj").dataset.json)
+  // console.log("jData",jData)
+  // henviser til det billede der skal skiftes ud
+  const cardImg = document.querySelector(".cardImg");
+
+  // hover billede
+  const hoverImageSrc = `/images/${data.imageHover}`;
+
+  // mouseover skift billede
+  cardImg.addEventListener("mouseover", function () {
+    cardImg.src = hoverImageSrc;
+  });
+
+  // mouseout skift tilbage
+  cardImg.addEventListener("mouseout", function () {
+    cardImg.src = `/images/${data.image2}`;
+  });
+</script>

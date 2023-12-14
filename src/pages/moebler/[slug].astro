@@ -30,24 +30,27 @@ console.log(myData);
     <article>
       <img class="productImg" src=`/images/${myData.image}` alt={myData.slug} />
       <img class="productImg" src=`/images/${myData.image}` alt={myData.slug} />
-
     </article>
 
-    <article class="tekst">
-      <h2>{myData.name}</h2>
-      <h3>{myData.price}</h3>
-      <a href="/contact"><p class="knap">KONTAKT FOR BESTILLING</p></a>
-      <!--<h3>{myData.category}</h3> -->
-      <p class="beskrivelse">{myData.description}</p>
-      <section class="produktinformation">
-      <h3>Produktinformation</h3>
-      <ul>
-      <p>{myData.productInfo}</p>
-      <p>{myData.productInfo2}</p>
-      <p>{myData.productInfo3}</p>
-      </ul>
-    </section>
+    <article>
+      <div class="tekst">
+        <h2>{myData.name}</h2>
+        <h3>{myData.price}</h3>
+        <a href="/contact"><p class="knap">KONTAKT FOR BESTILLING</p></a>
+        <!--<h3>{myData.category}</h3> -->
+        <p class="beskrivelse">{myData.description}</p>
+        <section class="produktinformation">
+          <h3>Produktinformation</h3>
+          <ul>
+            <li><p>{myData.productInfo}</p></li>
+            <li><p>{myData.productInfo2}</p></li>
+            <li><p>{myData.productInfo3}</p></li>
+          </ul>
+        </section>
+      </div>
     </article>
+
+   
   </section>
   <!-- slot slut -->
 </Layout>
@@ -55,9 +58,12 @@ console.log(myData);
 <style>
   #productdisplay {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* se på denne igen */
-    gap: 1rem;
-    margin-top: 4rem;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(300px, 1fr)
+    ); /* se på denne igen */
+    gap: 3rem;
+    margin-top: 5rem;
     margin-left: 1rem;
     margin-right: 1rem;
     text-align: center; /* se på denne igen i mobile version */
@@ -71,19 +77,21 @@ console.log(myData);
   h2,
   h3,
   p {
-    margin-top: 2rem;
+    margin-top: 1rem;
     max-width: 90%;
     text-align: left;
   }
 
-  h2{
+  h2 {
     font-weight: 400;
+    font-size: 22px;
     text-transform: uppercase;
     letter-spacing: 4px;
-    text-decoration: underline; /* se på denne igen , er der pænt? */
-    }
+    /*text-decoration: underline; /* se på denne igen , er der pænt? */
+    border-bottom: 1px solid #000;
+  }
 
-  .knap{
+  .knap {
     background-color: black;
     color: white;
     padding: 1rem;
@@ -92,28 +100,28 @@ console.log(myData);
     text-align: center;
   }
 
-  .beskrivelse{
+  .beskrivelse {
     margin-top: 3rem;
   }
 
-  .produktinformation{
+  .produktinformation {
     margin-top: 3rem;
   }
 
+  li {
+    margin-left: 1rem;
+  }
 
-  .produktinformation h3{
+  .produktinformation h3 {
     text-transform: uppercase;
     letter-spacing: 4px;
     font-weight: 400;
     font-size: 17px;
-
-
-}
-  .produktinformation p{
-margin-top: 1rem;
-/*text-decoration: underline;*/
-}
-  
+  }
+  .produktinformation p {
+    margin-top: 1rem;
+    /*text-decoration: underline;*/
+  }
 
   /* større skærme */
   @media screen and (min-width: 600px) {
@@ -130,20 +138,23 @@ margin-top: 1rem;
       text-align: center; /* virker ikke */
     }
 
-    article:nth-child(1){
+    article:nth-child(1) {
       order: 2;
     }
 
-    article:nth-child(2){
+    article:nth-child(2) {
       order: 1;
     }
 
     .knap:hover {
-    /*background-color: #DAD3C1;*/
-    /*color: black;*/
-    opacity: 70%;
-    /*transition: 1s;*/
-  }
-
+      /*background-color: #DAD3C1;*/
+      /*color: black;*/
+      opacity: 70%;
+      /*transition: 1s;*/
+    }
+    .tekst {
+      position: sticky;
+      top: 0;
+    }
   }
 </style>
