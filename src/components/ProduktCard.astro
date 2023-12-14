@@ -1,13 +1,18 @@
 ---
 const { data } = Astro.props;
+// const jsonData = JSON.stringify({data})
 ---
-
+<!-- <div class="json_obj" data-json={jsonData}></div> -->
 <!--<a href={`/${data.slug}`}>-->
  <a href={`/moebler/${data.slug}`}>
   <div class="card">
     <section class="gridItem">
-      <img class="cardImg" src={`/images/${data.image2}`} alt={data.slug} />
-      <h2>{data.name}</h2>
+     <img class="cardImg" src={`/images/${data.image2}`} alt={data.slug} />
+    
+     <div class="cardImg">
+      
+    </div> 
+     <h2>{data.name}</h2>
       <p>{data.price}</p>
     </section>
   </div>
@@ -21,8 +26,14 @@ const { data } = Astro.props;
   }
   
   .cardImg {
-    /*width: 100%;*/
-    width: 300px;
+    width: 420px;
+   height: auto; 
+    background-image: url({`/images/${data.imageHover}`});
+  }
+
+  .cardImg:hover{
+background: url({`/images/${data.imageHover}`});
+
   }
   h2{
     color: black;
@@ -39,16 +50,16 @@ margin-top: 0.5rem;
 font-weight: 300;
 letter-spacing: 3px;
 font-size: 13px;
-
-
-
   }
 
   a{
     color: black;
   }
 
+  /* a:hover{
+    <img class="cardImg" src={`/images/${data.imageHover}`} alt={data.slug} />
 
+  } */
 
 
   /* større skærme */
@@ -58,12 +69,15 @@ font-size: 13px;
 
 </style>
 
+
 <script>
+  // const jData = JSON.parse(document.querySelector(".json_obj").dataset.json)
+  // console.log("jData",jData)
   // henviser til det billede der skal skiftes ud
-  const cardImg = document.getElementById('cardImg');
+  const cardImg = document.querySelector('.cardImg');
 
   // hover billede
-  const hoverImageSrc = `/images/${data.imageHover}`;
+ const hoverImageSrc = `/images/${data.imageHover}`;
 
   // mouseover skift billede
   cardImg.addEventListener('mouseover', function () {

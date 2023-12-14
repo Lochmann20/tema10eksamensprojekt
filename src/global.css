@@ -27,4 +27,8 @@ h1, h2, h3, p, nav, footer, label, div, a{
     grid-row: 1; 
     }
 
+/*article .tekst{
+        position: sticky;
+        top: 0;
+      }*/
 }
