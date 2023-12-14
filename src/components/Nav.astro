@@ -5,7 +5,7 @@
   
   <nav class="open-menu">
     <div>
-      <a href="/index.html">Forside</a>
+      <a href="/">Forside</a>
       <a href="/shop">Shop</a>
       <a href="/contact">Kontakt</a>
       <a href="/about">Om mig</a>
@@ -13,10 +13,10 @@
   </nav>
 
 
-  <img class="logo-img" src="Logo-icon.png" alt="logo"/>
+  <a href="/"> <img class="logo-img" src="logo_vahlwood.svg" alt="logo"/> </a>
 
   
-  <img class="img" src="brev.png" alt="logo" width="5%"/>
+  <a href="/contact"><img class="brev" src="letter.png" alt="logo"/> </a>
   
   
   </div>
@@ -34,12 +34,15 @@
 }
 
 .logo-img{
-  width: 46%;
+  margin-top: 0.5rem;
+  width: 200px;
 }
 
-.img{
-  width: 11%;
-  margin-right: 0.5em;
+.brev{
+  width: 2rem;
+  height: 2rem;
+  margin-right: 2rem;
+  margin-top: 0.5rem;
 }
 
   .hamburger{
@@ -134,7 +137,7 @@
   }
 
   .logo-img{
-    width: 33%;
+    width: 100%;
   }
 
   .img{
@@ -155,11 +158,13 @@
 @media screen and (min-width:999px) {
   .hamburger{
     width: 45px;
-    margin-left: 2em;
+    margin-left: 3rem;
   }
 
   .logo-img{
-    width: 12%;
+    width: 50%;
+    margin-left: 12rem;
+    margin-top: 0.5rem;
   }
 
   .img{
