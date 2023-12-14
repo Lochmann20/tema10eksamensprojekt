@@ -19,9 +19,16 @@ h1, h2, h3, p, nav, footer, label, div, a{
 }
 
 
+ /* større skærme */
+ @media screen and (min-width: 600px) {
+
 .kategori a:nth-child(even) .grid .col2 {
     grid-column: 1;
     grid-row: 1; 
     }
 
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> 99cf1094113ec38cfa013ec6035a85ba178d5aa8
