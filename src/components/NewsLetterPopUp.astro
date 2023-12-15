@@ -4,15 +4,15 @@
 <div class="newsletter-modul">
     <div class="newsletter-background">
         <form id="newsletter-form">
-            <h1>VAHL WOOD</h1>
-            <h2>10% rabat på din første ordre.</h2>
+            <!--<h1>VAHL WOOD</h1>-->
+            <h2>10% rabat på din første ordre!</h2>
             <p>Tilmeld dig nyhedsbrevet og spar 10% på din første ordre.</p>
             <div class="form-groupe">
-            <input type="email" name="email" id="email" placeholder="Enter email adress">
+            <input type="email" name="email" id="email" placeholder="Indtast din e-mail">
             <button id="submit-btn">Modtag din rabat</button>
             </div>
             <p class="nejTak">Nej Tak</p>
-            <h3>Du tilmelder dig for at modtage kommunikation via e-mail og kan til enhver tid afmelde dig.</h3>
+            <h3>*Du tilmelder dig for at modtage kommunikation via e-mail og kan til enhver tid afmelde dig.</h3>
         </form>
     </div>
 </div>
@@ -25,7 +25,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-color: rgba(0, 0, 0, 0, 0.5);
+        /*background-color: rgba(0,0,0,0.5);*/
+        z-index: 1000;
     }
 
 
@@ -36,13 +37,14 @@
         text-align: center;
         border: 1px solid grey;
         position: fixed;
-        bottom: 0.1px;
-        right: 0.1px;
+        bottom: 2rem;
+        right: 2rem;
     }
 
     .form-groupe{
         display: grid;
         gap: 14px;
+        margin-top: 0.8rem;
     }
 
     .form-groupe input{
@@ -70,22 +72,26 @@
     }
 
     p{
-        font-size: 0.7rem;
+        font-size: 12px;
         margin-bottom: 0.2rem;
     }
 
     .nejTak{
         font-size: 0.8rem;
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.5rem;
     }
 
+    /*.nejTak:hover{
+        background-color: rgb(175, 175, 175);
+    }*/
     h3{
-        font-size: 0.5rem;
+        /*font-size: 0.5rem;*/
+        font-size: 12px;
         margin-bottom: 0.2rem;
     }
 
     #submit-btn{
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.5rem;
     }
 
 
@@ -106,7 +112,9 @@
 
 @media screen and (min-width: 1000px) {
     .newsletter-background{
-        width: 25%;
+        /*width: 25%;*/
+        width: 40%;
+
     }
     
 }

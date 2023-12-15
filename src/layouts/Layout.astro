@@ -28,12 +28,15 @@ import NewsLetterPopUp from "../components/NewsLetterPopUp.astro";
   <body>
     <Nav />
     <NewsLetterPopUp />
+    <slot name="hero"/>
+
     <main>
       <slot />
       <!-- slot er alt indhold fra pages -->
       <Instagram/>
-      <Footer />
+
     </main>
+    <Footer />
 
 
   </body>
