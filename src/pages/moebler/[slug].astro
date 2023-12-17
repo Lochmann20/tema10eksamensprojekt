@@ -65,13 +65,15 @@ console.log(myData);
     ); /* se på denne igen */
     gap: 3rem;
     margin-top: 5rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    /*margin-left: 1rem;*/
+    /*margin-right: 1rem;*/
+    /*margin: 1rem;*/
+    padding: 25px;
     text-align: center; /* se på denne igen i mobile version */
   }
 
   .productImg {
-    width: 160px;
+    width: 180px;
     text-align: center; /* virker ikke */
   }
 
@@ -79,13 +81,13 @@ console.log(myData);
   h3,
   p {
     margin-top: 1rem;
-    max-width: 90%;
+    max-width: 95%;
     text-align: left;
   }
 
   h2 {
     font-weight: 400;
-    font-size: 22px;
+    font-size: 25px;
     text-transform: uppercase;
     letter-spacing: 4px;
     /*text-decoration: underline; /* se på denne igen , er der pænt? */
@@ -121,7 +123,6 @@ console.log(myData);
   }
   .produktinformation p {
     margin-top: 1rem;
-    /*text-decoration: underline;*/
   }
 
   /* større skærme */
@@ -130,13 +131,11 @@ console.log(myData);
       display: grid;
       grid-template-columns: 1fr 1fr;
       margin-top: 6rem;
-
-      /*align-items: center;*/
     }
 
     .productImg {
       width: 350px;
-      text-align: center; /* virker ikke */
+      text-align: center;
     }
 
     article:nth-child(1) {
@@ -148,10 +147,7 @@ console.log(myData);
     }
 
     .knap:hover {
-      /*background-color: #DAD3C1;*/
-      /*color: black;*/
       opacity: 70%;
-      /*transition: 1s;*/
     }
     .tekst {
       position: sticky;
