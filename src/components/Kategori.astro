@@ -37,14 +37,9 @@ const { data } = Astro.props;
   }
 
   .col1 {
-    /*text-align: center;*/
     margin: 1rem;
   }
 
-  .col1,
-  .col2 {
-    /*grid-area: 1/1;*/
-  }
   .cardImg {
     width: 300px;
   }
@@ -91,31 +86,15 @@ const { data } = Astro.props;
       grid-template-columns: 1fr 1fr;
     }
 
-   /*.grid section:nth-child(even) {
-      grid-column: 1;
-      grid-row: 1;
-      flex-direction: row-reverse;
-      order: 1;
-    }*/
-
     .col1 {
       margin-bottom: -1rem;
-      /*order: 1;*/
     }
 
     .col2 {
-      /*padding: 50px;*/
-      /*order: 2;*/
       margin-left: 2rem; 
       margin-top: 2rem;
     }
 
- 
-
-    .col1,
-    .col2 {
-      /*grid-area: none;*/
-    }
 
     h2 {
       margin-top: 5rem;
