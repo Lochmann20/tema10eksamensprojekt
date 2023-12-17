@@ -88,24 +88,4 @@ const { data } = Astro.props;
       margin-top: 3rem;
     }
   }
-</style>
 
-<script>
-  // const jData = JSON.parse(document.querySelector(".json_obj").dataset.json)
-  // console.log("jData",jData)
-  // henviser til det billede der skal skiftes ud
-  const cardImg = document.querySelector(".cardImg");
-
-  // hover billede
-  const hoverImageSrc = `/images/${data.imageHover}`;
-
-  // mouseover skift billede
-  cardImg.addEventListener("mouseover", function () {
-    cardImg.src = hoverImageSrc;
-  });
-
-  // mouseout skift tilbage
-  cardImg.addEventListener("mouseout", function () {
-    cardImg.src = `/images/${data.image2}`;
-  });
-</script>

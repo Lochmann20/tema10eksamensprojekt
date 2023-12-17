@@ -11,15 +11,13 @@ const { data } = Astro.props;
       </div>
     </div>
 
-        <h2>{data.name}</h2>
-        <p>{data.price}</p>
-      </div>
-    </a>
+    <h2>{data.name}</h2>
+    <p>{data.price}</p>
+  </div>
+</a>
 
-
-    <style>
-
-.overlay{
+<style>
+  .overlay {
     position: relative;
   }
 
@@ -44,45 +42,43 @@ const { data } = Astro.props;
     color: white;
     font-size: 16px;
   }
-      .cards {
-        margin-top: 2rem;
-        /*text-align: center;*/
-        padding: 25px;
-        /*margin-top: 0rem;*/
-      }
+  .cards {
+    margin-top: 2rem;
+    padding: 25px;
+  }
 
-      .cardImg {
-        width: 100%;
-        height: auto;
-      }
+  .cardImg {
+    width: 100%;
+    height: auto;
+  }
 
-      h2,
-      p {
-        color: black;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        font-weight: 300;
-      }
+  h2,
+  p {
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 300;
+  }
 
-      h2 {
-        margin-top: 1rem;
-        font-size: 17px;
-      }
+  h2 {
+    margin-top: 1rem;
+    font-size: 17px;
+  }
 
-      p {
-        font-size: 13px;
-        margin-top: 0.5rem;
-      }
+  p {
+    font-size: 13px;
+    margin-top: 0.5rem;
+  }
 
-      /* større skærme */
-      @media screen and (min-width: 600px) {
-        .cardImg {
-          width: 420px;
-          height: auto;
-        }
+  /* større skærme */
+  @media screen and (min-width: 600px) {
+    .cardImg {
+      width: 420px;
+      height: auto;
+    }
 
-        .cards {
-          margin-top: 3rem;
-        }
-      }
-    </style>
+    .cards {
+      margin-top: 3rem;
+    }
+  }
+</style>
